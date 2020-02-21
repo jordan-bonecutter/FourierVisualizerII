@@ -512,7 +512,7 @@ class SVGPathArtist:
           points.append(bezier(t/100., instr[1], instr[2]) + translate)
       elif instr[0] == 'q':
         for t in range(100):
-          points.append(n_bezer(t/100., instr[1], instr[2], instr[3]) + translate)
+          points.append(n_bezier(t/100., instr[1], instr[2], instr[3]) + translate)
       elif instr[0] == 'c':
         for t in range(100):
           points.append(n_bezier(t/100., instr[1], instr[2], instr[3], instr[4]) + translate)
