@@ -12,12 +12,6 @@ teststr = "M1084.5,1622.5c195-93,405-249,472-382s-75-254-121-16-106,496-106,496,
 def bezier(t, z0, z1):
   return z0*(1-t) + z1*t
 
-def qbez(t, z0, z1, z2):
-  return z1 + ((1-t)*(1-t))*(z0 - z1) + t*t*(z2 - z1)
-
-def cbez(t, z0, z1, z2, z3):
-  return ((1-t)*(1-t)*(1-t))*z0 + 3*((1-t)*(1-t)*t)*z1 + 3*((1-t)*t*t)*z2 + t*t*t*z3
-
 def n_bezier(t, *control_points):
   if len(control_points) == 2:
     return bezier(t, control_points[0], control_points[1])
@@ -523,3 +517,6 @@ class SVGPathArtist:
         for t in range(100):
           points.append(n_bezier(t/100., instr[1], instr[2], instr[3], instr[4]) + translate)
     return points
+
+if __name__ == '__main__':
+  print(readpath(teststr))

@@ -11,10 +11,10 @@ from math import pi as M_PI
 from math import e as M_E
 
 # target output video size and length
-OUT_WIDTH = 1920//3
-OUT_HEIGHT = 1080//3
+OUT_WIDTH = 1920
+OUT_HEIGHT = 1080
 OUT_FPS = 60
-FRAME_COUNT = 10*OUT_FPS
+FRAME_COUNT = 20*OUT_FPS
 
 
 def save_frame(tosave, vwriter, tbuff=None):
@@ -82,7 +82,7 @@ def main(argv) -> int:
   ctx    = cairo.Context(sfc)
   ctx.set_line_width(2)
   ctx.set_line_cap(cairo.LineCap.ROUND)
-  vwriter = cv.VideoWriter(argv[1],cv.VideoWriter_fourcc(*'MJPG'),OUT_FPS,(OUT_WIDTH, OUT_HEIGHT))
+  vwriter = cv.VideoWriter(argv[2],cv.VideoWriter_fourcc(*'MJPG'),OUT_FPS,(OUT_WIDTH, OUT_HEIGHT))
 
   # draw the frames
   todraw = [points[0]]
