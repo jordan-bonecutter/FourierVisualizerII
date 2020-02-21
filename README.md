@@ -5,3 +5,5 @@ Running the program is pretty simple (I'll probably add some more opts in the fu
 Just python3 ./main.py <input.svg> <output.avi>
 ... and BAM! That easy. 
 For now you can change framerate, video size, and other options at the top of the main.py file.
+
+Also, this requires my pyxml module, which can be found on my github repos.
