@@ -1,4 +1,4 @@
-# PyFvis
+# FourierVisualizerII
 A rewritten version of my Fourier transform visualizer, now in Python! It also takes SVG files as input!
 
 Running the program is pretty simple (I'll probably add some more opts in the future). 
